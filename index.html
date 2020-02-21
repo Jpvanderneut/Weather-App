@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://openweathermap.org/api"></script>
+</head>
+
+<body>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <div class="jumbotron">
+    <h1 class="display-4">Get Current Weather</h1>
+    <p class="lead"></p>
+    <hr class="my-4">
+    <p>Enter City Name</p>
+    <a class="btn btn-primary btn-lg" href="#" role="button" id="weatherButton">City Name</a>
+    <span id=error></span>
+    <form class="needs-validation" novalidate>
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="city">City Name</label>
+          <input type="text" class="form-control" id="city" value="" required>
+          <div class="valid-feedback">
+
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script>
+    $(document).ready(function () {
+      $(document).on("click", "#weatherButton", function () {
+
+
+        let city = $("city").val();
+        if (city != "") {
+        }
+
+        $.ajax({
+          url: 'http://api.openweathermap.org/data/2.5/forecast?q=city&appid=21063c7fd34cbd8b144b265eccaf1a6e&units=imperial',
+          method: "GET",
+          dataType: 'json',
+          success: function (response) {
+            console.log(data)
+          }
+
+
+          // the temperature, the humidity, the wind speed, and the UV index
+        })
+
+          .then(function (response) {
+            $(document).response(),
+              //  let results = response.data;
+
+              console.log(results);
+          })
+
+        function show(response)
+        return "Weather"
+
+
+
+
+
+
+
+
+    // After the data comes back from the API
+    // .then(function(response) {
+    // Storing an array of results in the results variable
+    // var results = response.data;
+    // console.log(response)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body >
+
+
+
+
+</html >
